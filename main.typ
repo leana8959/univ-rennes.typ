@@ -1,6 +1,6 @@
 // This is both an example and a test
 
-#import "lib.typ": conf
+#import "lib/lib.typ": conf
 
 #show: conf.with(
   "Un projet " + sym.lambda,

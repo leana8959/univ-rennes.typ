@@ -7,4 +7,4 @@ license = "MIT"
 description = "An opinionated, non official template for University of Rennes"
 categories = ["template"]
 keywords = ["university", "rennes"]
-exclude = [".gitignore", "tests/*", "main.typ"]
+exclude = [".gitignore", "tests/*"]
