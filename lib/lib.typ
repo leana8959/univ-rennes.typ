@@ -55,9 +55,21 @@
 
   // Show a smaller title when the coverpage is not visible
   if not with-coverpage {
-    set align(center)
-    text(size: 2em)[#title - #author]
-    v(5em)
+    let title-text = text(size: 2em)[#title]
+    let author-text = text(size: 1.2em)[#author]
+
+    show: box.with(width: 100%)
+    set align(center + bottom)
+    context if (
+      measure(title-text).width > page.width / 3
+        or measure(author-text).width > page.width / 3
+        or measure(author-text).width + measure(title-text).width > page.width
+    ) {
+      stack(dir: ttb, title-text, 1em, author-text)
+    } else {
+      stack(dir: ltr, 7fr, title-text, 1fr, author-text, 7fr)
+    }
+    v(7em)
   }
 
   doc
