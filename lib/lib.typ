@@ -22,11 +22,13 @@
     align(right)[
       #stack(
         dir: ttb,
-        7fr,
+        2fr,
         strong(text(size: 3em)[#title]),
         1.5em,
         emph(text(size: 1.8em)[#author]),
         3fr,
+        align(center)[#image("UNIVRENNES_LOGOnoir.svg", height: 4em)],
+        2em,
       )
     ]
     pagebreak()
