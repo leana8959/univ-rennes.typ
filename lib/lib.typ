@@ -1,5 +1,3 @@
-#import "@preview/weave:0.1.0": pipe_
-
 #let conf(
   title,
   author,
@@ -15,8 +13,11 @@
   set par(justify: true)
   set heading(numbering: "1.1 -")
 
-  show ref: pipe_((underline, emph))
-  show link: pipe_((text.with(rgb("#0000EE")), underline, emph))
+  show ref: underline
+  show ref: emph
+  show link: text.with(rgb("#0000EE"))
+  show link: underline
+  show link: emph
 
   if with-coverpage {
     align(right)[
