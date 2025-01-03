@@ -1,0 +1,10 @@
+[package]
+name = "univ-rennes"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Léana 江 <@leana8959>"]
+license = "MIT"
+description = "An opinionated, non official template for University of Rennes"
+categories = ["template"]
+keywords = ["university", "rennes"]
+exclude = [".gitignore", "tests/*", "main.typ"]
