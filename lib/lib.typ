@@ -20,10 +20,14 @@
 
   if with-coverpage {
     align(right)[
-      #v(7fr)
-      *#text(size: 3em)[#title]*\
-      _#text(size: 1.8em)[#author]_
-      #v(3fr)
+      #stack(
+        dir: ttb,
+        7fr,
+        strong(text(size: 3em)[#title]),
+        1.5em,
+        emph(text(size: 1.8em)[#author]),
+        3fr,
+      )
     ]
     pagebreak()
   }
@@ -40,8 +44,8 @@
 
   // Content starts here
   set page(numbering: "1 / 1", number-align: right)
-  set par(first-line-indent: 2em)
   counter(page).update(_ => 1)
+
   // Show a smaller title when the coverpage is not visible
   if not with-coverpage {
     set align(center)
