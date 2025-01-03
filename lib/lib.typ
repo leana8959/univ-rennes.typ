@@ -8,6 +8,10 @@
   with-toc: true,
   doc,
 ) = {
+  if type(author) == array {
+    author = author.join(", ")
+  }
+
   set document(title: title, author: author)
   set text(size: fontsize, lang: lang, font: font, hyphenate: true)
   set par(justify: true)
