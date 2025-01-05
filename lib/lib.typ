@@ -12,6 +12,8 @@
   ///         - use another logo
   ///         - etc
   layout-logo: opts => align(center)[#opts.univ-rennes],
+  /// Put show rules that should influence the cover page here
+  pre-show: x => x,
   doc,
 ) = {
   if type(author) == array {
@@ -28,6 +30,8 @@
   show link: text.with(rgb("#0000EE"))
   show link: underline
   show link: emph
+
+  show: pre-show
 
   if with-coverpage {
     align(right)[
