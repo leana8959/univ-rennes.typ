@@ -49,6 +49,7 @@
         3fr,
         layout-logo((
           univ-rennes: image.with("assets/UNIVRENNES_LOGOnoir.svg"),
+          istic: image.with("assets/istic.png"),
         )),
         2em,
       )
