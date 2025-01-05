@@ -10,7 +10,10 @@
   with-toc: true,
   /// A lambda called with the university's logo by default.
   /// You can change or style logo
-  layout-logo: opts => align(center)[#opts.univ-rennes],
+  layout-logo: opts => {
+    let logo = opts.univ-rennes
+    align(center, logo(height: 4em))
+  },
   /// Extra content shown on the coverpage
   /// Cite your internship superviser here if you wish
   coverpage-extra: [],
@@ -45,7 +48,7 @@
         [ #emph(text(size: 1.8em)[#author])\ #coverpage-extra ],
         3fr,
         layout-logo((
-          univ-rennes: image("assets/UNIVRENNES_LOGOnoir.svg", height: 4em),
+          univ-rennes: image.with("assets/UNIVRENNES_LOGOnoir.svg"),
         )),
         2em,
       )
@@ -75,9 +78,7 @@
     show: box.with(width: 100%)
     set align(center + bottom)
     context if (
-      measure(title-text).width > page.width / 3
-        or measure(author-text).width > page.width / 3
-        or measure(author-text).width + measure(title-text).width > page.width
+      measure(title-text).width > page.width / 3 or measure(author-text).width > page.width / 3 or measure(author-text).width + measure(title-text).width > page.width
     ) {
       stack(dir: ttb, title-text, 1em, author-text)
     } else {
