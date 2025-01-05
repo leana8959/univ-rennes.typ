@@ -8,7 +8,7 @@ feature :)
 
 ## Example
 You can either use this as a simple handout, or a more sophisticated internship report.
-Check out examples folder in the repository for these examples.
+Check out examples folder in the repository for these examples, or docs folder for the handbook.
 
 ## TODOS
 - [ ] pick a non canonical package name
