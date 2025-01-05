@@ -1,30 +1,35 @@
-// This is both an example and a test
-
-#import "../lib.typ": conf
+#import "../lib.typ": conf, style-author-default
 
 #show: conf.with(
-  "Rapport de Stage",
+  "Etude d'un Sujet Profondément Intéressant",
   ("John Doe", "Jane Doe"),
-  coverpage-extra: [
-    #set text(1.2em)
-    _Stage supervisé par Jean Martin_
-  ],
-  // An example of overriding the logo layout
-  layout-logo: logos => {
-    align(
-      center,
-      stack(
-        dir: ltr,
-        1.5fr,
-        logos.at("univ-rennes")(height: 3em),
-        3em,
-        logos.at("istic")(height: 2.7em),
-        1fr,
-      ),
-    )
-  },
   with-toc: true,
   with-coverpage: true,
+  // Override the logo
+  layout-logo: logos => {
+    set align(center)
+    stack(
+      dir: ltr,
+      1.5fr,
+      logos.at("univ-rennes")(height: 3em),
+      3em,
+      logos.at("istic")(height: 2.7em),
+      1fr,
+    )
+  },
+  // Add a subtitle
+  subtitle: strong[
+    #text(1.24em)[Rapport de Stage de L3 Informatique] \
+    ISTIC - Université de Rennes \
+    Année 2023 - 2024
+  ],
+  // Add text to the author field
+  style-author: who => style-author-default[
+    #who \
+    Rennes \
+    Supervisé par Jean Dupont \
+    Du 2023 à 2024
+  ],
 )
 
 = Foo

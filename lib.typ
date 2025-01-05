@@ -3,8 +3,8 @@
   align(center, logo(height: 4em))
 }
 
-#let layout-title-default(it) = [*#text(3em)[#it]*]
-#let layout-author-default(it) = [_#text(1.8em)[#it]_]
+#let style-title-default(it) = text(1.6em)[*#smallcaps(it)*]
+#let style-author-default(it) = text(1.4em)[#it]
 
 #let conf(
   title,
@@ -17,13 +17,10 @@
   /// Include a table of content
   with-toc: true,
   /// A lambda called with the university's logo by default.
-  /// You can change or style logo
   layout-logo: layout-logo-default,
-  layout-title: layout-title-default,
-  layout-author: layout-author-default,
-  /// Extra content shown on the coverpage
-  /// Cite your internship superviser here if you wish
-  coverpage-extra: [],
+  style-title: style-title-default,
+  style-author: style-author-default,
+  subtitle: [],
   /// Put show rules that should influence the cover page here
   pre-show: x => x,
   doc,
@@ -46,23 +43,19 @@
   show: pre-show
 
   if with-coverpage {
-    align(right)[
-      #stack(
-        dir: ttb,
-        2fr,
-        layout-title(title),
-        1.5em,
-        layout-author(author),
-        1em,
-        coverpage-extra,
-        3fr,
-        layout-logo((
-          univ-rennes: image.with("assets/UNIVRENNES_LOGOnoir.svg"),
-          istic: image.with("assets/istic.png"),
-        )),
-        2em,
-      )
-    ]
+    stack(
+      dir: ttb,
+      subtitle,
+      4em,
+      style-title(title),
+      5fr,
+      style-author(author),
+      1fr,
+      layout-logo((
+        univ-rennes: image.with("assets/UNIVRENNES_LOGOnoir.svg"),
+        istic: image.with("assets/istic.png"),
+      )),
+    )
     pagebreak()
   }
 
