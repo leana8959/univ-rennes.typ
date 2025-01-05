@@ -1,10 +1,14 @@
 // This is both an example and a test
 
-#import "lib/lib.typ": conf
+#import "../lib.typ": conf
 
 #show: conf.with(
-  "Un projet " + sym.lambda,
-  "John Doe",
+  "Rapport de Stage",
+  ("John Doe", "Jane Doe"),
+  coverpage-extra: [
+    #set text(1.2em)
+    _Stage supervisé par Jean Martin_
+  ],
   with-toc: true,
   with-coverpage: true,
 )
@@ -17,14 +21,11 @@
 # Dangerous ! Boom !
 :(){ :|:& };:
 ```
-
-https://wikipedia.org $<-$ that is a link
+#lorem(50)
+https://wikipedia.org
 
 = Another heading
 $
   (lambda x. x) v -> v
 $
-#lorem(100)
-
-
-
+#lorem(50)

@@ -45,7 +45,7 @@
         [ #emph(text(size: 1.8em)[#author])\ #coverpage-extra ],
         3fr,
         layout-logo((
-          univ-rennes: image("UNIVRENNES_LOGOnoir.svg", height: 4em),
+          univ-rennes: image("assets/UNIVRENNES_LOGOnoir.svg", height: 4em),
         )),
         2em,
       )

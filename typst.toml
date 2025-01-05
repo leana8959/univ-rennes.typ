@@ -9,4 +9,8 @@ homepage = "https://github.com/leana8959/univ-rennes.typ"
 repository = "https://github.com/leana8959/univ-rennes.typ"
 keywords = ["university", "rennes", "template", "france"]
 categories = ["template"]
-exclude = [".gitignore", "tests/*"]
+exclude = [".gitignore", "shell.nix", "Justfile"]
+
+[template]
+path = "examples/"
+entrypoint = "rapport-stage.typ"
