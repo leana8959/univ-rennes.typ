@@ -6,12 +6,14 @@
   fontsize: 1em,
   /// Fine tune whether this is a long report or not
   with-coverpage: true,
+  /// Include a table of content
   with-toc: true,
   /// A lambda called with the university's logo by default.
-  /// You can - change the logo
-  ///         - use another logo
-  ///         - etc
+  /// You can change or style logo
   layout-logo: opts => align(center)[#opts.univ-rennes],
+  /// Extra content shown on the coverpage
+  /// Cite your internship superviser here if you wish
+  coverpage-extra: [],
   /// Put show rules that should influence the cover page here
   pre-show: x => x,
   doc,
@@ -40,7 +42,7 @@
         2fr,
         strong(text(size: 3em)[#title]),
         1.5em,
-        emph(text(size: 1.8em)[#author]),
+        [ #emph(text(size: 1.8em)[#author])\ #coverpage-extra ],
         3fr,
         layout-logo((
           univ-rennes: image("UNIVRENNES_LOGOnoir.svg", height: 4em),
