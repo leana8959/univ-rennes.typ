@@ -1,4 +1,10 @@
-#import "@preview/weave:0.2.0": compose_
+#let layout-logo-default(opts) = {
+  let logo = opts.univ-rennes
+  align(center, logo(height: 4em))
+}
+
+#let layout-title-default(it) = [*#text(3em)[#it]*]
+#let layout-author-default(it) = [_#text(1.8em)[#it]_]
 
 #let conf(
   title,
@@ -12,18 +18,9 @@
   with-toc: true,
   /// A lambda called with the university's logo by default.
   /// You can change or style logo
-  layout-logo: opts => {
-    let logo = opts.univ-rennes
-    align(center, logo(height: 4em))
-  },
-  layout-title: compose_.with((
-    strong,
-    text.with(size: 3em)
-  )),
-  layout-author: compose_.with((
-    emph,
-    text.with(size: 1.8em)
-  )),
+  layout-logo: layout-logo-default,
+  layout-title: layout-title-default,
+  layout-author: layout-author-default,
   /// Extra content shown on the coverpage
   /// Cite your internship superviser here if you wish
   coverpage-extra: [],
