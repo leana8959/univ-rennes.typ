@@ -9,14 +9,7 @@ homepage = "https://github.com/leana8959/univ-rennes.typ"
 repository = "https://github.com/leana8959/univ-rennes.typ"
 keywords = ["university", "rennes", "template", "france"]
 categories = ["template"]
-exclude = [
-    ".gitignore",
-    "shell.nix",
-    "Justfile",
-    "example-pdf/",
-    "docs/",
-    "thumbnail.png",
-]
+exclude = []
 
 [template]
 path = "examples/"
