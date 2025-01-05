@@ -6,3 +6,5 @@ generate:
     done
 
     typst compile --root . --pages 1 examples/rapport-stage.typ thumbnail.png
+
+    typst compile --root . docs/handbook.typ

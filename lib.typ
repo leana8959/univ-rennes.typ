@@ -6,22 +6,36 @@
 #let style-title-default(it) = text(1.6em)[*#it*]
 #let style-author-default(it) = text(1.4em)[#it]
 
+/// Test
 #let conf(
+  /// -> str
   title,
+  /// -> str | array
   author,
+  /// -> str
   lang: "fr",
+  /// -> str
   font: "New Computer Modern",
+  /// -> length
   fontsize: 1em,
-  /// Fine tune whether this is a long report or not
+  /// -> bool
   with-coverpage: true,
-  /// Include a table of content
+  /// -> bool
   with-toc: true,
-  /// A lambda called with the university's logo by default.
+  /// A lambda called with the university and ISTIC's logo by default
+  /// -> function
   layout-logo: layout-logo-default,
+  /// Style `title` on cover page, no effect if cover page disabled
+  /// -> function
   style-title: style-title-default,
+  /// Style `author` on cover page, no effect if cover page disabled
+  /// -> function
   style-author: style-author-default,
+  /// A subtitle that would go over the title on the coverpage,
+  /// no effect if cover page disabled
   subtitle: [],
-  /// Put show rules that should influence the cover page here
+  /// Anything that you want to set before any content (including the cover page
+  /// and toc)
   pre-show: x => x,
   doc,
 ) = {
