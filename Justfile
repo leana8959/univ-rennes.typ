@@ -1,7 +1,6 @@
-watch program file:
+generate:
     #!/usr/bin/env bash
-    if [ ! -f {{ file }} ]; then
-        typst compile --root . {{ file }}
-    fi
-    {{ program }} {{ without_extension(file) }}.pdf & disown
-    typst watch --root . {{ file }}
+    mkdir -p example-pdf
+    for f in examples/*.typ; do
+        typst compile --root . $f example-pdf/$(basename ${f%.typ}).pdf
+    done
