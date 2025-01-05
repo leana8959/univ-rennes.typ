@@ -1,3 +1,5 @@
+#import "@preview/weave:0.2.0": compose_
+
 #let conf(
   title,
   author,
@@ -14,6 +16,14 @@
     let logo = opts.univ-rennes
     align(center, logo(height: 4em))
   },
+  layout-title: compose_.with((
+    strong,
+    text.with(size: 3em)
+  )),
+  layout-author: compose_.with((
+    emph,
+    text.with(size: 1.8em)
+  )),
   /// Extra content shown on the coverpage
   /// Cite your internship superviser here if you wish
   coverpage-extra: [],
@@ -43,9 +53,11 @@
       #stack(
         dir: ttb,
         2fr,
-        strong(text(size: 3em)[#title]),
+        layout-title(title),
         1.5em,
-        [ #emph(text(size: 1.8em)[#author])\ #coverpage-extra ],
+        layout-author(author),
+        1em,
+        coverpage-extra,
         3fr,
         layout-logo((
           univ-rennes: image.with("assets/UNIVRENNES_LOGOnoir.svg"),
