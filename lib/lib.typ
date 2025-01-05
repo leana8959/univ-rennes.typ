@@ -1,11 +1,17 @@
 #let conf(
   title,
   author,
-  lang: "fr", // oui oui baguette
+  lang: "fr",
   font: "New Computer Modern",
   fontsize: 1em,
+  /// Fine tune whether this is a long report or not
   with-coverpage: true,
   with-toc: true,
+  /// A lambda called with the university's logo by default.
+  /// You can - change the logo
+  ///         - use another logo
+  ///         - etc
+  layout-logo: opts => align(center)[#opts.univ-rennes],
   doc,
 ) = {
   if type(author) == array {
@@ -32,7 +38,9 @@
         1.5em,
         emph(text(size: 1.8em)[#author]),
         3fr,
-        align(center)[#image("UNIVRENNES_LOGOnoir.svg", height: 4em)],
+        layout-logo((
+          univ-rennes: image("UNIVRENNES_LOGOnoir.svg", height: 4em),
+        )),
         2em,
       )
     ]
