@@ -3,7 +3,7 @@
   align(center, logo(height: 4em))
 }
 
-#let style-title-default(it) = text(1.6em)[*#smallcaps(it)*]
+#let style-title-default(it) = text(1.6em)[*#it*]
 #let style-author-default(it) = text(1.4em)[#it]
 
 #let conf(

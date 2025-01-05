@@ -18,7 +18,8 @@
     )
   },
   // Add a subtitle
-  subtitle: strong[
+  subtitle: smallcaps[
+    #set text(1.1em)
     #text(1.24em)[Rapport de Stage de L3 Informatique] \
     ISTIC - Université de Rennes \
     Année 2023 - 2024
