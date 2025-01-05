@@ -14,3 +14,4 @@ exclude = [".gitignore", "shell.nix", "Justfile", "example-pdf/"]
 [template]
 path = "examples/"
 entrypoint = "rapport-stage.typ"
+thumbnail = "thumbnail.png"
