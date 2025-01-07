@@ -11,5 +11,5 @@ generate:
 
 publish tpkgs:
     #!/usr/bin/env bash
-    cp LICENSE README.md typst.toml lib.typ \
+    cp -r LICENSE README.md typst.toml lib.typ assets \
         {{ tpkgs }}
