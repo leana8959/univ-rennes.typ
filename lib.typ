@@ -85,7 +85,7 @@
 
   // Content starts here
   set page(numbering: "1 / 1", number-align: right)
-  counter(page).update(_ => 1)
+  counter(page).update(1)
 
   // Show a smaller title when the coverpage is not visible
   if not with-coverpage {
@@ -113,7 +113,7 @@
   doc,
 ) = {
   pagebreak()
-  counter(heading).update(_ => 0)
+  counter(heading).update(0)
   set heading(numbering: numbering)
   doc
 }
