@@ -24,6 +24,13 @@
     ISTIC - Université de Rennes \
     Année 2023 - 2024
   ],
+  appendix: [
+    // You might want to write the appendix in another file and include it here.
+    #pagebreak()
+    #counter(heading).update(_ => 0)
+    #set heading(numbering: "I.I -")
+    = Annexe
+  ],
   // Add text to the author field
   style-author: who => style-author-default[
     #who \

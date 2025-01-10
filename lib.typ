@@ -34,6 +34,8 @@
   /// A subtitle that would go over the title on the coverpage,
   /// no effect if cover page disabled
   subtitle: [],
+  /// -> content
+  appendix: [],
   /// Anything that you want to set before any content (including the cover page
   /// and toc)
   pre-show: x => x,
@@ -105,4 +107,5 @@
   }
 
   doc
+  appendix
 }
