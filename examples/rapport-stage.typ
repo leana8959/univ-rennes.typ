@@ -1,4 +1,4 @@
-#import "../lib.typ": conf, style-author-default
+#import "../lib.typ": conf, style-author-default, appendix
 
 #show: conf.with(
   "Etude d'un Sujet Profondément Intéressant",
@@ -23,13 +23,6 @@
     #text(1.24em)[Rapport de Stage de L3 Informatique] \
     ISTIC - Université de Rennes \
     Année 2023 - 2024
-  ],
-  appendix: [
-    // You might want to write the appendix in another file and include it here.
-    #pagebreak()
-    #counter(heading).update(_ => 0)
-    #set heading(numbering: "I.I -")
-    = Annexe
   ],
   // Add text to the author field
   style-author: who => style-author-default[
@@ -56,3 +49,7 @@ $
   (lambda x. x) v -> v
 $
 #lorem(50)
+
+// You might want to write the appendix in another file and include it here.
+#show: appendix
+= Annexe

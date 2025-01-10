@@ -34,8 +34,6 @@
   /// A subtitle that would go over the title on the coverpage,
   /// no effect if cover page disabled
   subtitle: [],
-  /// -> content
-  appendix: [],
   /// Anything that you want to set before any content (including the cover page
   /// and toc)
   pre-show: x => x,
@@ -107,5 +105,15 @@
   }
 
   doc
-  appendix
+}
+
+#let appendix(
+  /// -> str
+  numbering: "I.I -",
+  doc,
+) = {
+  pagebreak()
+  counter(heading).update(_ => 0)
+  set heading(numbering: numbering)
+  doc
 }
