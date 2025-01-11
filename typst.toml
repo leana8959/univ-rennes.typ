@@ -8,7 +8,7 @@ description = "A customizable, non official template for University of Rennes"
 homepage = "https://github.com/leana8959/univ-rennes.typ"
 repository = "https://github.com/leana8959/univ-rennes.typ"
 keywords = ["university", "rennes", "template", "france"]
-categories = ["template"]
+categories = ["report"]
 exclude = []
 
 [template]
