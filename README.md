@@ -1,7 +1,6 @@
 # univ-rennes.typ
 Since University of Rennes doesn't have an official template.
-This is an opinionated, non-official attempt of one.
-It is made to be minimal and highly customizable.
+This is a minimal, highly customizable, non-official attempt of one.
 
 Feel free to open a PR if this template doesn't cover your use case, or you would like to add a
 feature :)
