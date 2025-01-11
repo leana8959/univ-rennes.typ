@@ -11,7 +11,7 @@ generate:
 
 publish tpkgs:
     #!/usr/bin/env bash
-    cp -r LICENSE README.md typst.toml lib.typ assets examples \
+    cp -r LICENSE README.md typst.toml lib.typ assets examples thumbnail.png \
         {{ tpkgs }}
 
     find {{ tpkgs }} -name "*.pdf" -type f -delete
