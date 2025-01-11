@@ -1,6 +1,6 @@
 // This is both an example and a test
 
-#import "../lib.typ": conf
+#import "@preview/ennui-ur-report:0.1.0": conf
 
 #show: conf.with(
   "Compte Rendu",

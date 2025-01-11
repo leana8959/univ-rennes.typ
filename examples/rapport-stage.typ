@@ -1,4 +1,4 @@
-#import "../lib.typ": conf, style-author-default, appendix
+#import "@preview/ennui-ur-report:0.1.0": conf, style-author-default, appendix
 
 #show: conf.with(
   "Etude d'un Sujet Profondément Intéressant",

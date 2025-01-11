@@ -14,5 +14,5 @@ Check out examples folder in the repository for these examples, or docs folder f
 
 ## TODOS
 - [x] pick a non canonical package name
-- [ ] update examples to package name and not relative path
+- [x] update examples to package name and not relative path
 - [ ] show logo when coverpage is turned off? if so, what should the layout be?
