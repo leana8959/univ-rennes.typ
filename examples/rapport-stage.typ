@@ -11,9 +11,9 @@
     stack(
       dir: ltr,
       1.5fr,
-      logos.at("univ-rennes")(height: 3em),
-      3em,
       logos.at("istic")(height: 2.7em),
+      3em,
+      logos.at("univ-rennes")(height: 3em),
       1fr,
     )
   },
