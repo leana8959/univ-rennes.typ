@@ -15,4 +15,5 @@ Check out examples folder in the repository for these examples, or docs folder f
 ## TODOS
 - [x] pick a non canonical package name
 - [x] update examples to package name and not relative path
+- [ ] reimplement appendix when it is possible to figure out how to handle the counter
 - [ ] show logo when coverpage is turned off? if so, what should the layout be?

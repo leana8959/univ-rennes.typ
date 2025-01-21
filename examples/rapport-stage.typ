@@ -1,4 +1,4 @@
-#import "@preview/ennui-ur-report:0.1.0": conf, style-author-default, appendix
+#import "@preview/ennui-ur-report:0.1.0": conf, style-author-default
 
 #show: conf.with(
   "Etude d'un Sujet Profondément Intéressant",
@@ -49,7 +49,3 @@ $
   (lambda x. x) v -> v
 $
 #lorem(50)
-
-// You might want to write the appendix in another file and include it here.
-#show: appendix
-= Annexe

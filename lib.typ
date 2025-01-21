@@ -107,15 +107,3 @@
 
   doc
 }
-
-#let appendix(
-  /// -> str
-  numbering: "I.I -",
-  doc,
-) = {
-  pagebreak()
-  counter(heading).update(0)
-  counter(page).update(1)
-  set heading(numbering: numbering)
-  doc
-}
