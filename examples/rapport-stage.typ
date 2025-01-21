@@ -10,7 +10,7 @@
     set align(center)
     stack(
       dir: ltr,
-      1.5fr,
+      1.2fr,
       logos.at("istic")(height: 2.7em),
       3em,
       logos.at("univ-rennes")(height: 3em),
