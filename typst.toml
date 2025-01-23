@@ -8,7 +8,7 @@ description = "A customizable, non official template for University of Rennes"
 repository = "https://github.com/leana8959/univ-rennes.typ"
 keywords = ["university", "rennes", "template", "france"]
 categories = ["report"]
-exclude = ["examples/", "thumbnail.png"]
+exclude = ["thumbnail.png"]
 
 [template]
 path = "examples/"
